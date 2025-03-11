@@ -1,0 +1,238 @@
+/* Centered Body */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    position: relative;
+}
+
+.dark-theme {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Heading */
+h1 {
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+.dark-theme h1 {
+    color: white;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Responsive Board */
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+}
+
+/* Tic Tac Toe Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+.dark-theme .cell {
+    background-color: #333;
+    color: white;
+}
+
+.cell:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+/* Winning Cell Animation */
+@keyframes winAnimation {
+    0% { background-color: white; }
+    50% { background-color: lightgreen; }
+    100% { background-color: white; }
+}
+
+.winning-cell {
+    animation: winAnimation 0.5s ease-in-out infinite;
+}
+
+/* Game Status */
+#status {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+.dark-theme #status {
+    color: white;
+}
+
+/* Controls Wrapper */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Mode Selection */
+.mode-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* AI Mode Styling */
+.ai-mode {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Other Buttons - Placed Below */
+.other-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Buttons */
+button, select {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button Colors */
+#pvp {
+    background-color: #007bff;
+    color: white;
+}
+
+#ai {
+    background-color: #ff9800;
+    color: white;
+}
+
+#reset {
+    background-color: #28a745;
+    color: white;
+}
+
+/* AI Difficulty Selector */
+#ai-difficulty {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-theme #ai-difficulty {
+    background-color: #bb9900;
+    color: white;
+}
+
+/* Hover Effects */
+button:hover, select:hover {
+    opacity: 0.8;
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Theme Toggle */
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    color: #222;
+}
+
+.dark-theme #theme-toggle {
+    color: #ddd;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Winner Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.dark-theme .popup {
+    background-color: #333;
+    color: white;
+}
+
+/* Hide Popup Initially */
+.hidden {
+    display: none;
+}

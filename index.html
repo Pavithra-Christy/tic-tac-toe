@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+
+    <div class="game-container">
+        <div id="status" aria-live="polite">Player X's Turn</div>
+
+        <!-- Button Controls -->
+        <div class="controls">
+            <div class="mode-buttons">
+                <button id="pvp">Player vs Player</button>
+                <div class="ai-mode">
+                    <button id="ai">Player vs AI</button>
+                    <select id="ai-difficulty" aria-label="AI Difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard" selected>Hard</option>
+                    </select>
+                </div>
+            </div>
+            <div class="other-buttons">
+                <button id="reset">Reset</button>
+                <button id="theme-toggle">☀️</button>
+            </div>
+        </div>
+
+        <div id="board" class="board"></div>
+    </div>
+
+    <div id="winner-popup" class="popup hidden">
+        <p id="winner-text"></p>
+        <button id="close-popup">Close</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+    <script src="script.js"></script>
+</body>
+</html>
