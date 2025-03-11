@@ -2,6 +2,10 @@
 
 This is a simple yet interactive Tic-Tac-Toe game built with HTML, CSS, and JavaScript. It features both **Player vs Player (PvP)** and **Player vs AI** modes with different AI difficulty levels.  
 
+## 🔗 Links  
+- **Solution URL:** [GitHub Repository](https://github.com/Pavithra-Christy/tic-tac-toe)  
+- **Live Site URL:** [Live Demo](https://pavithra-christy.github.io/tic-tac-toe/)  
+
 ## 🚀 Features  
 - **Play Modes**  
   - 🆚 **PvP Mode**: Two players take turns.  
